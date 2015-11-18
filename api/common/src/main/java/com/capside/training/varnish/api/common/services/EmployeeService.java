@@ -31,7 +31,7 @@ public class EmployeeService {
     }
 
     public Optional<Employee> getEmployee(String identifier){
-        return Optional.of(employees.get(identifier));
+        return Optional.ofNullable(employees.get(identifier));
     }
 
     public Set<Employee> getEmployees() {

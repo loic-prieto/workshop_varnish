@@ -1,6 +1,8 @@
 package com.capside.training.varnish.api.common.model;
 
+import java.util.Collection;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Contact {
     private String name;
@@ -8,9 +10,9 @@ public class Contact {
     private String email;
     private String observations;
 
-    public Contact(String name, Set<String> telephones, String email, String observations) {
+    public Contact(String name, Collection<String> telephones, String email, String observations) {
         this.name = name;
-        this.telephones = telephones;
+        this.telephones = telephones.parallelStream().collect(Collectors.toSet());
         this.email = email;
         this.observations = observations;
     }

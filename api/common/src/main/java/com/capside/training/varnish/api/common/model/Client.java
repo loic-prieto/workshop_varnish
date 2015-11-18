@@ -1,16 +1,18 @@
 package com.capside.training.varnish.api.common.model;
 
+import java.util.Collection;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Client {
     private String name;
     private String description;
     private Set<Contact> contacts;
 
-    public Client(String name, String description, Set<Contact> contacts) {
+    public Client(String name, String description, Collection<Contact> contacts) {
         this.name = name;
         this.description = description;
-        this.contacts = contacts;
+        this.contacts = contacts.parallelStream().collect(Collectors.toSet());
     }
 
     public Client(String name, String description) {
