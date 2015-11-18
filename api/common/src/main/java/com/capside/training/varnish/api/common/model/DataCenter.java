@@ -4,6 +4,11 @@ public class DataCenter {
     private String name;
     private String description;
 
+    public DataCenter(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
     public String getName() {
         return name;
     }
