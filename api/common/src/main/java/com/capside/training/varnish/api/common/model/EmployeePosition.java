@@ -9,5 +9,6 @@ public enum EmployeePosition {
     CTO,
     EVANGELIST,
     CEO,
+    SDM,
     FINANCES;
 }

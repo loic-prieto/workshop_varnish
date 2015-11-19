@@ -2,10 +2,7 @@ package com.capside.training.varnish.api.common.services;
 
 import com.capside.training.varnish.api.common.model.Contact;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ContactService {
@@ -30,8 +27,8 @@ public class ContactService {
         });
     }
 
-    public Contact getContact(String name) {
-        return contacts.get(name);
+    public Optional<Contact> getContact(String name) {
+        return Optional.ofNullable(contacts.get(name));
     }
 
 }

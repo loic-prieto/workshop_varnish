@@ -25,15 +25,16 @@ public class ClientService {
         this.contactService = contactService;
 
         //Build up the client list with contacts
+        //Badly used optionals, I know. May the lord forgive me.
         List<Client> clientList = new ArrayList<Client>();
-        Contact bonastre = this.contactService.getContact("mbonastre");
-        Contact catedra = this.contactService.getContact("jcatedra");
+        Contact bonastre = this.contactService.getContact("mbonastre").get();
+        Contact catedra = this.contactService.getContact("jcatedra").get();
         clientList.add(new Client("gec","GEC Learning Services", Arrays.asList(bonastre,catedra)));
-        Contact joanpallas = this.contactService.getContact("jcpallas");
-        Contact pereta = this.contactService.getContact("jpereta");
+        Contact joanpallas = this.contactService.getContact("jcpallas").get();
+        Contact pereta = this.contactService.getContact("jpereta").get();
         clientList.add(new Client("mango","Mango Shop", Arrays.asList(joanpallas,pereta)));
-        Contact tonidorado = this.contactService.getContact("tdorado");
-        Contact xpladellorens = this.contactService.getContact("xpladellorens");
+        Contact tonidorado = this.contactService.getContact("tdorado").get();
+        Contact xpladellorens = this.contactService.getContact("xpladellorens").get();
         clientList.add(new Client("deporvillage","Deporvillage", Arrays.asList(tonidorado,xpladellorens)));
 
         clientList.parallelStream().forEach(client->{

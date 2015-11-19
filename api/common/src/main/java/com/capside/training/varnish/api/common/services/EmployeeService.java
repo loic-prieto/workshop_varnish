@@ -24,7 +24,10 @@ public class EmployeeService {
             new Employee("lprieto","Loïc Prieto",EmployeePosition.SUPPORT),
             new Employee("hdcesario","Daniel Cesario",EmployeePosition.PROJECTS),
             new Employee("jruano","Josep Ruano",EmployeePosition.CEO),
-            new Employee("jlmartinez","José Luis Martinez",EmployeePosition.SUPPORT)
+            new Employee("jlmartinez","José Luis Martinez",EmployeePosition.SUPPORT),
+            new Employee("rarribas","Raúl Arribas",EmployeePosition.SDM),
+            new Employee("jlmanzanares","Josep Lluis Manzanares",EmployeePosition.SALES),
+            new Employee("tdavin","Thierry Davin",EmployeePosition.PRESALES)
         ).parallelStream().forEach(employee->{
             employees.put(employee.getIdentifier(),employee);
         });
