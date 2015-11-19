@@ -1,7 +1,6 @@
 package com.capside.training.varnish.api.common.model;
 
 import java.util.Collection;
-import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -17,7 +16,7 @@ public class Project {
 
     private String name;
 
-    public Project(String name,Client client,Employee sales, Employee presales, Employee SDM, Employee engineer, Collection<Contact> contacts, Collection<DataCenter> dataCenters) {
+    public Project(String name, Client client, Employee sales, Employee presales, Employee SDM, Employee engineer, Collection<Contact> contacts, Collection<DataCenter> dataCenters) {
         this.name = name;
         this.client = client;
         this.sales = sales;
